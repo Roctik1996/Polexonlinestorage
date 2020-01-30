@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">PolexOnline - Storage</string>
+    <string name="main_view">PolexOnline - Store</string>
+    <string name="delivery_view">Партии</string>
+    <string name="check_view">Сканирование посылки</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="hint_username">username</string>
+    <string name="sign_in_btn">Sign In</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="menu_add_txt">Добавить посылку</string>
+    <string name="menu_check">Проверить посылку</string>
+    <string name="menu_delivery">Партии  Поставки</string>
+    <string name="menu_all">Все посылки</string>
+    <string name="menu_exit">Выход</string>
+    <string name="hint_password">password</string>
+    <string name="title_my">Мои посылки</string>
+    <string name="body_my">Общее количетсво посылок, которые я принял на склад за рабочий день</string>
+    <string name="title_all">Всего партий и их посылок</string>
+    <string name="body_all">Общее количетсво всех партий и суммарное количество их посылок на складе</string>
+    <string name="title_storage">Всего посылок на складе</string>
+    <string name="body_storage">Общее количетсво всех посылок, которые находятся на складе и зарегистрированы в системе</string>
+    <string name="title_activity_delivery">DeliveryActivity</string>
+    <string name="scan_text_ok">OK</string>
+    <string name="scan_txt_title">Наведите на QR или штрих-код</string>
+    <string name="txt_check_detail">Проверить</string>
+    <string name="txt_detail_upload">Отгрузить</string>
+    <string name="txt_detail_cancel">Завершить</string>
+    <string name="invoice_view">Накладные</string>
+</resources>

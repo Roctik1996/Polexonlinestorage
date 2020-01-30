@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2fb3d1</color>
+    <color name="colorPrimaryDark">#e6eaed</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorLoginPane">#f7f6f5</color>
+    <color name="colorBase">#2fb3d1</color>
+    <color name="colorError">#ff7200</color>
+    <color name="colorDone">#00cbaf</color>
+</resources>

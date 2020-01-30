@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.LoginActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/background"
+        android:scaleType="centerCrop"
+        android:alpha="0.3"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="325dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="100dp"
+        android:background="@color/colorLoginPane"
+        android:elevation="1dp">
+
+        <TextView
+            android:id="@+id/txtNameApp"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/app_name"
+            android:textColor="@android:color/black"
+            android:textSize="25sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"/>
+
+        <ImageView
+            android:id="@+id/usernameIcon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_user"
+            android:scaleType="fitCenter"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/txtNameApp"
+            />
+        <EditText
+            android:id="@+id/edtUsername"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@android:color/transparent"
+            android:hint="@string/hint_username"
+            android:layout_toEndOf="@+id/usernameIcon"
+            android:layout_below="@+id/txtNameApp"
+            android:layout_marginTop="20dp"
+            android:paddingStart="10dp"
+            android:inputType="text"
+            android:theme="@style/MyEditTextTheme"
+            android:layout_marginEnd="20dp"
+            />
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/darker_gray"
+            android:layout_below="@+id/usernameIcon"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            />
+
+        <ImageView
+            android:id="@+id/passIcon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_key"
+            android:scaleType="fitCenter"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/line1"
+            />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etPasswordLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
+            app:hintEnabled="false"
+            android:layout_toEndOf="@id/passIcon"
+            android:layout_above="@id/line2"
+            android:layout_marginEnd="20dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtPass"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:paddingStart="10dp"
+                android:hint="@string/hint_password"
+                android:inputType="textPassword"
+                android:theme="@style/MyEditTextTheme"
+                android:background="@android:color/transparent"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <View
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/darker_gray"
+            android:layout_below="@+id/passIcon"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="5dp"
+            />
+        <Button
+            android:id="@+id/signIn"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/line2"
+            android:text="@string/sign_in_btn"
+            android:background="@color/colorBase"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:textColor="@android:color/white"
+            android:elevation="1dp"
+            android:textAllCaps="false"
+            />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="1dp"
+        android:background="@android:color/darker_gray"
+        android:alpha="0.6"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="invisible">
+
+    </FrameLayout>
+
+    <ProgressBar
+        android:id="@+id/loader"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:elevation="1dp"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        android:indeterminateTint="@color/colorBase"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="invisible"/>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

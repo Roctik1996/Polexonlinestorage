@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.DetailGoodsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_invoice_detail"
+            android:layout_width="match_parent"
+            android:elevation="1dp"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorBase"
+            android:theme="@style/ToolbarTheme"
+            app:navigationIcon="?attr/homeAsUpIndicator">
+
+            <TextView
+                android:id="@+id/title_invoice_toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="?attr/actionBarSize"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/txt_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:textSize="25sp"/>
+
+
+    <TextView
+        android:id="@+id/inv_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="From"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:textSize="13sp"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/txt_num"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/txt_inv_from"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginEnd="10dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/inv_from"
+        app:layout_constraintStart_toStartOf="@id/inv_from"
+        app:layout_constraintEnd_toStartOf="@id/txt_inv_country_from"/>
+
+    <TextView
+        android:id="@+id/txt_inv_country_from"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_inv_from"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txt_inv_from" />
+
+    <TextView
+        android:id="@+id/inv_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To"
+        android:layout_marginTop="5dp"
+        android:textColor="@android:color/black"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@id/txt_inv_from"
+        app:layout_constraintTop_toBottomOf="@id/txt_inv_from" />
+
+    <TextView
+        android:id="@+id/txt_inv_country_to"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_inv_to"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txt_inv_to" />
+
+    <TextView
+        android:id="@+id/txt_inv_to"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginEnd="10dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/inv_to"
+        app:layout_constraintStart_toStartOf="@id/inv_to"
+        app:layout_constraintEnd_toStartOf="@id/txt_inv_country_to"/>
+    <TextView
+        android:id="@+id/txt_inv_phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/txt_inv_to"
+        app:layout_constraintStart_toStartOf="@id/txt_inv_to"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/txt_inv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@+id/txt_detail_weight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/txt_inv_to"
+        app:layout_constraintTop_toBottomOf="@+id/txt_detail_count" />
+
+    <ImageView
+        android:id="@+id/icon_detail_calendar"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_calendar"
+        app:layout_constraintTop_toTopOf="@id/txt_detail_cost"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_detail_cost"
+        app:layout_constraintStart_toStartOf="@id/inv_to" />
+
+    <TextView
+        android:id="@+id/txt_detail_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/icon_detail_calendar"
+        app:layout_constraintStart_toEndOf="@id/icon_detail_calendar"
+        app:layout_constraintTop_toTopOf="@+id/icon_detail_calendar" />
+
+    <TextView
+        android:id="@+id/txt_detail_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_inv_phone" />
+
+    <TextView
+        android:id="@+id/txt_detail_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_detail_count" />
+
+    <TextView
+        android:id="@+id/txt_detail_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_detail_weight" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_detail_goods"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/icon_check_detail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_detail_date">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <ImageView
+        android:id="@+id/icon_check_detail"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginBottom="10dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_qrcode_in_color"
+        app:layout_constraintBottom_toTopOf="@id/txt_detail_check"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_detail_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_check_detail"
+        android:textColor="@color/colorBase"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="1dp"
+        android:background="@android:color/darker_gray"
+        android:alpha="0.6"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="invisible">
+
+    </FrameLayout>
+
+    <ProgressBar
+        android:id="@+id/loader"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:elevation="1dp"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        android:indeterminateTint="@color/colorBase"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="invisible"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

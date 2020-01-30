@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="6dp">
+
+    <ImageView
+        android:id="@+id/item_icon"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/close_box"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/item_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="123456789"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/item_icon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/item_calendar"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_calendar"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/item_icon"
+        app:layout_constraintStart_toEndOf="@+id/item_icon"
+        app:layout_constraintTop_toBottomOf="@+id/item_num" />
+
+    <TextView
+        android:id="@+id/item_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="10.07.2019"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/item_calendar"
+        app:layout_constraintStart_toEndOf="@+id/item_calendar"
+        app:layout_constraintTop_toTopOf="@+id/item_calendar"
+        tools:ignore="SmallSp" />
+
+    <ImageView
+        android:id="@+id/item_info"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/ic_info"
+        app:layout_constraintBottom_toBottomOf="@+id/item_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/item_icon" />
+
+    <TextView
+        android:id="@+id/item_count_places"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="34 мест"
+        android:layout_marginEnd="10dp"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/line_horizontal"
+        app:layout_constraintTop_toTopOf="@+id/item_date"
+        tools:ignore="SmallSp" />
+
+    <View
+        android:id="@+id/line_horizontal"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/colorBase"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/item_info"
+        app:layout_constraintStart_toEndOf="@+id/item_icon"
+        app:layout_constraintTop_toBottomOf="@+id/item_calendar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
